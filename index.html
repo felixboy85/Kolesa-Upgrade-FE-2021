@@ -4,10 +4,69 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/src/assets/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/css/style.css">
     <title>Vite App</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+        <a class="main__link" href="#">Click Here!!!</a>
+        <div class="overlay">
+            <div class="modal">
+                <div class="modal__left">
+                    <img class="modal__img" src="/src/assets/images/main-img.png" alt="Толстовка">
+                    <div class="modal__thombnails">
+                        <img class="modal__thombnail" src="/src/assets/images/image1.png" alt="Мини-картинка-1">
+                        <img class="modal__thombnail" src="/src/assets/images/image2.png" alt="Мини-картинка-1">
+                        <img class="modal__thombnail" src="/src/assets/images/image3.png" alt="Мини-картинка-1">
+                    </div>
+                </div>
+                <div class="modal__right">
+                    <div class="modal__title">Футболка "Эволюционируй или сдохни"</div>
+                    <div class="modal__item-wrapper">
+                        <div class="modal__item-info">
+                            <div class="modal__item-price">100 баллов</div>
+                            <a href="#" class="modal__item-btn">Попросить 50 баллов</a>
+                        </div>
+                        <div class="modal__item-balance">
+                            <div class="modal__item-supheader">Твой баланс:</div>
+                            <div class="modal__item-points">50 баллов</div>
+                        </div>
+                    </div>
+                    <form class="modal__form" action="#">
+                        <div class="colors">
+                            <h3 class="colors__title">Цвета:</h3>
+                            <input type="radio" id="blue">
+                            <label for="blue">Синий</label>
+                            <input type="radio" id="beige">
+                            <label for="beige">Бежевый</label>
+                            <input type="radio" id="gray">
+                            <label for="gray">Серый</label>
+                        </div>
+                        <div class="sizes">
+                            <h3 class="sizes__title">Размер:</h3>
+                            <input type="radio" id="small">
+                            <label for="small">S</label>
+                            <input type="radio" id="medium">
+                            <label for="medium">M</label>
+                            <input type="radio" id="large">
+                            <label for="large">L</label>
+                        </div>
+                    </form>
+                    <div class="details">
+                        <h3 class="details__title">Детали:</h3>
+                        <p class="detail_decr">Брендированная толстовка от Qazaq Republic. Материал: Хлопок 80%, Вискоза 20%</p>
+                    </div>
+                    <div class="question">
+                        <h3 class="question__title">Как выбрать размер:</h3>
+                        <p class="question__txt">Написать дяде Рику для уточнения.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script type="module" src="/src/js/main.js"></script>
   </body>
 </html>
