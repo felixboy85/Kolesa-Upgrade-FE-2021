@@ -38,12 +38,14 @@
                     <form class="modal__form" action="#">
                         <div class="colors">
                             <h3 class="colors__title">Цвета:</h3>
-                            <input class="custom-radio blue" type="radio" id="blue" name="colors" checked>
-                            <label class="label__color" for="blue">Синий</label>
-                            <input class="custom-radio beige" type="radio" id="beige" name="colors">
-                            <label class="label__color" for="beige">Бежевый</label>
-                            <input class="custom-radio gray" type="radio" id="gray" name="colors">
-                            <label class="label__color" for="gray">Серый</label>
+                            <div class="colors__wrapper">
+                                <input class="custom-radio blue" type="radio" id="blue" name="colors" checked>
+                                <label class="label__color" for="blue">Синий</label>
+                                <input class="custom-radio beige" type="radio" id="beige" name="colors">
+                                <label class="label__color" for="beige">Бежевый</label>
+                                <input class="custom-radio gray" type="radio" id="gray" name="colors">
+                                <label class="label__color" for="gray">Серый</label>
+                            </div>
                         </div>
                         <div class="sizes">
                             <h3 class="sizes__title">Размер:</h3>
@@ -72,7 +74,6 @@
             </div>
         </div>
     </div>
-
     <script src="/src/js/main.js"></script>
   </body>
 </html>

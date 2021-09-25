@@ -81,9 +81,8 @@ p {
     left: 50%;
     transform: translate(-50%, -50%);
     max-width: 1040px;
-    max-height: 587px;
+    min-height: 587px;
     width: 100%;
-    height: 100%;
     border: 0;
     border-radius: 16px;
     background-color: #fff;
@@ -234,6 +233,11 @@ p {
     color: #1c1819;
 }
 
+.colors__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .details {
     margin-bottom: 24px;
 }
@@ -280,6 +284,7 @@ p {
 
 .sizes__wrapper {
     display: flex;
+    flex-wrap: wrap;
 }
 
 /* // Custom input // */
@@ -355,7 +360,7 @@ p {
 
 .label__color {
     padding: 8px;
-    margin: 0 4px;
+    margin: 0 4px 4px 4px;
     border-radius: 8px;
     border: 1px solid rgba(28, 24, 25, 0.1);
     font-weight: 400;
@@ -368,7 +373,7 @@ p {
 
 .label__size {
     display: inline-block;
-    margin: 0 4px;
+    margin: 0 4px 4px 4px;
     padding: 8px;
     border-radius: 8px;
     border: 1px solid rgba(28, 24, 25, 0.1);
