@@ -266,40 +266,27 @@
     user-select: none;
 }
 
-.custom-radio.blue + label::before {
+.custom-radio + label::before {
     content: '';
     display: inline-block;
-    background-color: var(--blue-color);
     width: 23px;
     height: 24px;
     flex-shrink: 0;
     flex-grow: 0;
     border-radius: 0.25em;
     margin-right: 0.5em;
+}
+
+.custom-radio.blue + label::before {
+    background-color: var(--blue-color);
 }
 
 .custom-radio.beige + label::before {
-    content: '';
-    display: inline-block;
     background-color: #efe8d8;
-    width: 23px;
-    height: 24px;
-    flex-shrink: 0;
-    flex-grow: 0;
-    border-radius: 0.25em;
-    margin-right: 0.5em;
 }
 
 .custom-radio.gray + label::before {
-    content: '';
-    display: inline-block;
     background-color: #d4d4da;
-    width: 23px;
-    height: 23px;
-    flex-shrink: 0;
-    flex-grow: 0;
-    border-radius: 0.25em;
-    margin-right: 0.5em;
 }
 
 .custom-radio:checked + .label__color {
