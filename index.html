@@ -7,12 +7,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/css/reset.css">
     <link rel="stylesheet" href="/src/css/style.css">
     <title>Vite App</title>
   </head>
   <body>
     <div id="app">
-        <a class="main__link" href="#">Click Here!!!</a>
+        <a class="main__link" id="main__link" href="#">Click Here!!!</a>
         <div class="overlay">
             <div class="modal">
                 <div class="modal__left">
@@ -39,22 +40,22 @@
                         <div class="colors">
                             <h3 class="colors__title">Цвета:</h3>
                             <div class="colors__wrapper">
-                                <input class="custom-radio blue" type="radio" id="blue" name="colors" checked>
+                                <input class="custom-radio blue visual-hidden" type="radio" id="blue" name="colors" checked>
                                 <label class="label__color" for="blue">Синий</label>
-                                <input class="custom-radio beige" type="radio" id="beige" name="colors">
+                                <input class="custom-radio beige visual-hidden" type="radio" id="beige" name="colors">
                                 <label class="label__color" for="beige">Бежевый</label>
-                                <input class="custom-radio gray" type="radio" id="gray" name="colors">
+                                <input class="custom-radio gray visual-hidden" type="radio" id="gray" name="colors">
                                 <label class="label__color" for="gray">Серый</label>
                             </div>
                         </div>
                         <div class="sizes">
                             <h3 class="sizes__title">Размер:</h3>
                             <div class="sizes__wrapper">
-                                <input class="custom-radio__size" type="radio" id="small" name="sizes" checked>
+                                <input class="custom-radio__size visual-hidden" type="radio" id="small" name="sizes" checked>
                                 <label class="label__size" for="small">S</label>
-                                <input class="custom-radio__size" type="radio" id="medium" name="sizes">
+                                <input class="custom-radio__size visual-hidden" type="radio" id="medium" name="sizes">
                                 <label class="label__size"  for="medium">M</label>
-                                <input class="custom-radio__size" type="radio" id="large" name="sizes">
+                                <input class="custom-radio__size visual-hidden" type="radio" id="large" name="sizes">
                                 <label class="label__size" for="large">L</label>
                             </div>
                         </div>
