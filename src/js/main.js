@@ -1,9 +1,11 @@
-const link = document.getElementById('main__link');
+const buttons = document.querySelectorAll('.main__btn-goods');
 const close = document.querySelector('.close__btn');
 const overlay = document.querySelector('.overlay');
 
-link.addEventListener('click', () => {
-    overlay.classList.add('show');
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        overlay.classList.add('show');
+    });
 });
 
 close.addEventListener('click', () => {

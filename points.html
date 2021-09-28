@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/src/assets/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/css/reset.css">
+    <link rel="stylesheet" href="/src/css/style.css">
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="header__wrapper">
+                    <div class="header__left">
+                        <a class="header__logo" href="#"><img class="header__logo-img" src="/src/assets/images/header_logo.svg" alt="Kolesa Logo"></a>
+                        <form class="header__form" action="#">
+                            <input class="header__input"  type="text" placeholder="Поиск">
+                            <button class="header__search"><img class="header__img" src="/src/assets/images/search-icon.svg" alt="Поиск" ></button>
+                        </form>
+                    </div>
+                    <div class="header__right">
+                        <a class="header__user" href="#">
+                            <img class="header__ava" src="src/assets/images/user.png" alt="Деда Рик">
+                            <div class="header__user-info">
+                                <div class="header__username">Деда Рик</div>
+                                <div class="header__userpoints">300 баллов</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Main -->
+        <section class="main">
+            <div class="container">
+                <div class="main__wrapper">
+                    <aside class="aside">
+                        <nav class="menu">
+                            <ul class="menu__list">
+                                <li class="menu__list-item">
+                                    <a class="menu__list-link" href="#">Оргсхема</a>
+                                </li>
+                                <li class="menu__list-item">
+                                    <a class="menu__list-link" href="#">Kolesa <span>Team</span></a>
+                                </li>
+                                <li class="menu__list-item">
+                                    <a class="menu__list-link" href="#">Kolesa Shop</a>
+                                </li>
+                                <li class="menu__list-item">
+                                    <a class="menu__list-link menu__list-link--active" href="#">Картина компании</a>
+                                </li>
+                                <li class="menu__list-item">
+                                    <a class="menu__list-link" href="#">Новости</a>
+                                </li>
+                                <li class="menu__list-item">
+                                    <a class="menu__list-link" href="#">Education</a>
+                                </li>
+                                <li class="menu__list-item">
+                                    <a class="menu__list-link" href="#">Guidelines</a>
+                                </li>
+                                <li class="menu__list-item">
+                                    <a class="menu__list-link" href="#">Библиотека</a>
+                                </li>
+                                <li class="menu__list-item">
+                                    <a class="menu__list-link" href="#">FAQ</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </aside>
+                    <div class="main__points">
+                        <div class="breadcrupms">
+                            <div class="breadcrumps__wrapper">
+                                <ul class="breadcrumps__list">
+                                    <li class="breadcrumps__list-item">
+                                        <a class="breadcrumps__list-link" href="#" >Kolesa Shop</a>
+                                    </li>
+                                    <li class="breadcrumps__list-item">
+                                        <a class="breadcrumps__list-link" href="#" >Как получить баллы</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="main__points-items">
+                            <h3 class="main__points-title">Как получить баллы</h3>
+                            <div class="main__points-wrapper">
+                                <div class="main__points-item">
+                                    <div class="main__points-header">Выступление на конференциях</div>
+                                    <div class="main__points-sum">90 баллов</div>
+                                    <p class="main__points-descr">Стань спикером на международной конференции по своему направлению</p>
+                                    <button class="main__btn mt-auto">Отправить заявку</button>
+                                </div>
+                                <div class="main__points-item">
+                                    <div class="main__points-header">Выступление на meetup</div>
+                                    <div class="main__points-sum">60 баллов</div>
+                                    <p class="main__points-descr">Стань спикером в Колёсах и на meetup других компаний. Расскажи о наших продуктах и технологиях которые мы используем</p>
+                                    <button class="main__btn mt-auto">Отправить заявку</button>
+                                </div>
+                                <div class="main__points-item">
+                                    <div class="main__points-header">Статья на habr/vc.ru/rusbase</div>
+                                    <div class="main__points-sum">60 баллов</div>
+                                    <p class="main__points-descr">Подготовь качественный контент, напиши и опубликуй статью на профильную тему</p>
+                                    <button class="main__btn mt-auto">Отправить заявку</button>
+                                </div>
+                                <div class="main__points-item">
+                                    <div class="main__points-header">Мастер-классы, тренинги, лекции, подкасты, прямые эфиры</div>
+                                    <div class="main__points-sum">60 баллов</div>
+                                    <p class="main__points-descr">Поделись профессиональными знаниями с коллегами. Важно обучить не менее 6 человек</p>
+                                    <button class="main__btn mt-auto">Отправить заявку</button>
+                                </div>
+                                <div class="main__points-item">
+                                    <div class="main__points-header">Организация мероприятия</div>
+                                    <div class="main__points-sum">60 баллов</div>
+                                    <p class="main__points-descr">Организуй турнир по командным играм в офисе. ЧГК, настольный теннис и другие направления. Не менее 10 участников в турнире</p>
+                                    <button class="main__btn mt-auto">Отправить заявку</button>
+                                </div>
+                                <div class="main__points-item">
+                                    <div class="main__points-header">Стань ментором в проекте «Kolesa Academy»</div>
+                                    <div class="main__points-sum">90 баллов ежемесячно</div>
+                                    <p class="main__points-descr">Стань ментором академиков, поделись своими знаниями и помоги ребятам завершить Kolesa Academy успешно</p>
+                                    <button class="main__btn mt-auto">Отправить заявку</button>
+                                </div>
+                                <div class="main__points-item">
+                                    <div class="main__points-header">Помощь HR team</div>
+                                    <div class="main__points-sum">50 баллов</div>
+                                    <p class="main__points-descr">Помоги организовать мероприятие</p>
+                                    <button class="main__btn mt-auto">Отправить заявку</button>
+                                </div>
+                                <div class="main__points-item">
+                                    <div class="main__points-header">Выступление на Demoday</div>
+                                    <div class="main__points-sum">30 баллов</div>
+                                    <p class="main__points-descr">Выступи на Demoday внутри своей команды и поделись знаниями</p>
+                                    <button class="main__btn mt-auto">Отправить заявку</button>
+                                </div>
+                                <div class="main__points-item">
+                                    <div class="main__points-header">Другое</div>
+                                    <p class="main__points-descr">Получай баллы если уже что-то сделано</p>
+                                    <button class="main__btn mt-auto">Отправить заявку</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__wrapper">
+                    <div class="footer__left">
+                        <div class="footer__copyright">© Kolesa Group</div>
+                        <div class="footer__social">
+                            <a class="footer__social-link" href="#"><img class="foooter__social-img" src="src/assets/images/instagram.svg" alt="Инстаграм"></a>
+                            <a class="footer__social-link" href="#"><img class="foooter__social-img" src="src/assets/images/youtube.svg" alt="Ютюб"></a>
+                            <a class="footer__social-link" href="#"><img class="foooter__social-img" src="src/assets/images/vk.svg" alt="Вконтакте"></a>
+                        </div>
+                    </div>
+                    <div class="footer__right">
+                        <div class="footer__text">
+                            <a class="footer__descr">Есть идеи что улучшить?</a>
+                            <a class="footer__descr">Не знаешь, с кем решить проблему?</a>
+                        </div>
+                        <button class="footer__btn">Написать</button>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Modal -->
+        <div class="overlay">
+            <div class="modal">
+                <div class="modal__left">
+                    <img class="modal__img" src="/src/assets/images/main-img.png" alt="Толстовка">
+                    <div class="modal__thumbnails">
+                        <img class="modal__thumbnail" src="/src/assets/images/image1.png" alt="Мини-картинка-1">
+                        <img class="modal__thumbnail modal__thumbnail--active" src="/src/assets/images/image2.png" alt="Мини-картинка-1">
+                        <img class="modal__thumbnail" src="/src/assets/images/image3.png" alt="Мини-картинка-1">
+                    </div>
+                </div>
+                <div class="modal__right">
+                    <div class="modal__title">Футболка "Эволюционируй или сдохни"</div>
+                    <div class="modal__item-wrapper">
+                        <div class="modal__item-info">
+                            <div class="modal__item-price">100 баллов</div>
+                            <a href="#" class="modal__item-btn">Попросить 50 баллов</a>
+                        </div>
+                        <div class="modal__item-balance">
+                            <div class="modal__item-supheader">Твой баланс:</div>
+                            <div class="modal__item-points">50 баллов</div>
+                        </div>
+                    </div>
+                    <form class="modal__form" action="#">
+                        <div class="colors">
+                            <h3 class="colors__title">Цвета:</h3>
+                            <div class="colors__wrapper">
+                                <input class="custom-radio blue visual-hidden" type="radio" id="blue" name="colors" checked>
+                                <label class="label__color" for="blue">Синий</label>
+                                <input class="custom-radio beige visual-hidden" type="radio" id="beige" name="colors">
+                                <label class="label__color" for="beige">Бежевый</label>
+                                <input class="custom-radio gray visual-hidden" type="radio" id="gray" name="colors">
+                                <label class="label__color" for="gray">Серый</label>
+                            </div>
+                        </div>
+                        <div class="sizes">
+                            <h3 class="sizes__title">Размер:</h3>
+                            <div class="sizes__wrapper">
+                                <input class="custom-radio__size visual-hidden" type="radio" id="small" name="sizes" checked>
+                                <label class="label__size" for="small">S</label>
+                                <input class="custom-radio__size visual-hidden" type="radio" id="medium" name="sizes">
+                                <label class="label__size"  for="medium">M</label>
+                                <input class="custom-radio__size visual-hidden" type="radio" id="large" name="sizes">
+                                <label class="label__size" for="large">L</label>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="details">
+                        <h3 class="details__title">Детали:</h3>
+                        <p class="detail_descr">Брендированная толстовка от Qazaq Republic. Материал: Хлопок 80%, Вискоза 20%</p>
+                    </div>
+                    <div class="question">
+                        <h3 class="question__title">Как выбрать размер:</h3>
+                        <p class="question__txt">Написать дяде Рику для уточнения.</p>
+                    </div>
+                </div>
+                <div class="modal__close">
+                    <img class="close__btn" src="/src/assets/images/close-big.svg" alt="close">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/src/js/main.js"></script>
+  </body>
+</html>
