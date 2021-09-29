@@ -124,6 +124,10 @@
 }
 
 /* Main Section */
+.main {
+    min-height: 100vh;
+}
+
 .main__wrapper {
     display: flex;
 }
