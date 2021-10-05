@@ -1,0 +1,340 @@
+@import '../scss/vars.scss';
+
+.overlay {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba(28, 24, 25, 0.6);
+    transition: all 0.8s ease;
+}
+
+.modal {
+    position: absolute;
+    padding: 64px 56px;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1040px;
+    min-height: 587px;
+    width: 100%;
+    border-radius: 16px;
+    background-color: $white;
+
+    // &__top {
+    // }
+
+    // &__back-btn {
+    // }
+
+    // &__back-img {
+    // }
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        width: 330px;
+        margin-right: 24px;
+    }
+
+    &__img {
+        margin-bottom: 16px;
+    }
+
+    &__thumbnails {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        overflow-y: auto;
+    }
+
+    &__thumbnail {
+        margin: 0 4px 4px 4px;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    &__thumbnail--active {
+        border: 1px solid #2a81dd;
+        box-sizing: border-box;
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    &__title {
+        margin-bottom: 8px;
+        font-size: 20px;
+        line-height: 32px;
+        color: $black;
+    }
+
+    &__item-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 24px;
+        width: 100%;
+    }
+
+    &__item-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__item-price {
+        margin-bottom: 8px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 32px;
+        color: $black;
+    }
+
+    &__item-balance {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        padding: 8px 16px;
+        border-radius: 16px;
+        width: 196px;
+        height: 68px;
+        background: #f0fafd;
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: 16px;
+            top: 12px;
+            background-image: url('../assets/images/icon.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            max-width: 40px;
+            max-height: 40px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__item-supheader {
+        color: $gray;
+    }
+
+    &__item-points {
+        font-size: 16px;
+        color: $black;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+}
+
+// .header {
+//     &__logo {
+//     }
+
+//     &__logo-img {
+//     }
+
+//     &__right-search {
+//     }
+
+//     &__right-input {
+//     }
+
+//     &__right-btn {
+//     }
+
+//     &__right-img {
+//     }
+// }
+
+.colors {
+    margin-bottom: 24px;
+
+    &__title {
+        text-align: left;
+        font-size: 14px;
+        margin-bottom: 4px;
+        color: $black;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.custom-radio {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+
+    & + label {
+        display: inline-flex;
+        align-items: center;
+        user-select: none;
+    }
+
+    & + label::before {
+        content: '';
+        display: inline-block;
+        width: 23px;
+        height: 24px;
+        flex-shrink: 0;
+        flex-grow: 0;
+        border-radius: 0.25em;
+        margin-right: 0.5em;
+    }
+
+    &.blue + label::before {
+        background-color: $blue;
+    }
+
+    &.beige + label::before {
+        background-color: $beige;
+    }
+
+    &.gray + label::before {
+        background-color: $semigray;
+    }
+
+    &:checked + .label__color {
+        color: $black;
+        border: 1px solid transparent;
+        background-color: #d6ecfb;
+    }
+
+    &__size {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        display: inline-flex;
+        align-items: center;
+        user-select: none;
+    }
+
+    &__size:checked + .label__size {
+        color: $black;
+        border: 1px solid transparent;
+        background-color: #d6ecfb;
+    }
+
+    &__size:disabled {
+        color: $blue;
+    }
+}
+
+.label {
+    &__color {
+        padding: 8px;
+        margin: 0 4px 4px 4px;
+        border: 1px solid rgba(28, 24, 25, 0.1);
+        color: $light-blue;
+        max-width: 114px;
+        height: 40px;
+        border-radius: 8px;
+    }
+
+    &__size {
+        text-align: center;
+        display: inline-block;
+        margin: 0 4px 4px 4px;
+        padding: 8px;
+        border: 1px solid rgba(28, 24, 25, 0.1);
+        color: $light-blue;
+        max-width: 40px;
+        width: 100%;
+        height: 40px;
+        border-radius: 8px;
+    }
+}
+
+.sizes {
+    margin-bottom: 24px;
+    width: 100%;
+
+    &__title {
+        text-align: left;
+        font-size: 14px;
+        margin-bottom: 4px;
+        color: $black;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.details {
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    &__title {
+        margin-bottom: 4px;
+        font-size: 14px;
+        font-weight: 600;
+        color: $black;
+    }
+}
+
+.detail {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    &_descr {
+        width: 100%;
+        text-align-last: left;
+        font-weight: normal;
+        color: $black;
+        overflow: hidden;
+    }
+}
+
+.question {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    &__title {
+        margin-bottom: 4px;
+        font-size: 14px;
+        font-weight: 600;
+        color: $black;
+    }
+
+    &__txt {
+        width: 100%;
+        text-align-last: left;
+        font-weight: normal;
+        color: $black;
+        overflow: hidden;
+    }
+}
+
+.close {
+    &__btn {
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        right: 24px;
+        top: 24px;
+        cursor: pointer;
+    }
+}
