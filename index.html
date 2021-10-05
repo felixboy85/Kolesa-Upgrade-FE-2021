@@ -8,7 +8,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/src/css/reset.css">
-    <link rel="stylesheet" href="/src/css/style.css">
     <title>Vite App</title>
   </head>
   <body>
@@ -20,6 +19,9 @@
             <div class="container">
                 <div class="header__wrapper">
                     <div class="header__left">
+                        <button class="header__hamburger-btn">
+                            <img class="header__hamburger-img" src="src/assets/images/burger.svg" alt="Меню">
+                        </button>
                         <a class="header__logo" href="#"><img class="header__logo-img" src="/src/assets/images/header_logo.svg" alt="Kolesa Logo"></a>
                         <form class="header__form" action="#">
                             <input class="header__input"  type="text" placeholder="Поиск">
@@ -35,9 +37,63 @@
                             </div>
                         </a>
                     </div>
+                    <form class="header__right-search">
+                        <input class="header__right-input" type="text" placeholder="Поиск">
+                        <button type="button" class="header__right-btn">
+                            <img class="header__right-img" src="src/assets/images/search-mobile.svg" alt="Поиск">
+                        </button>
+                    </form>
                 </div>
             </div>
         </header>
+
+        <!-- Hamburger menu -->
+
+        <div class="hamburger__menu">
+            <div class="hamburger__menu-wrapper">
+                <div class="hamburger__menu-top">
+                    <div class="hamburger__menu-logo">
+                       <a class="hamburger__menu-logo__link" href="#"><img class="hamburger__menu-img" src="src/assets/images/header_logo.svg" alt="Логотип"></a>
+                    </div>
+                    <a class="hamburger__menu-user">
+                        <img class="hamburger__menu-ava" src="src/assets/images/user.png" alt="Аватарка">
+                        <div class="hamburger__menu-name">Абдурахман <br> Калиакпаров</div>
+                    </a>
+                </div>
+                <nav class="hamburger__menu-bottom">
+                    <ul class="hamburger__menu-list">
+                        <li class="hamburger__menu-item">
+                            <a class="hamburger__menu-link" href="№">Оргсхема</a>
+                        </li>
+                        <li class="hamburger__menu-item">
+                            <a class="hamburger__menu-link hamburger__menu-link--active" href="№">Kolesa Team</a>
+                        </li>
+                        <li class="hamburger__menu-item">
+                            <a class="hamburger__menu-link" href="№">Kolesa <span>Shop</span></a>
+                        </li>
+                        <li class="hamburger__menu-item">
+                            <a class="hamburger__menu-link" href="№">Картина компании</a>
+                        </li>
+                        <li class="hamburger__menu-item">
+                            <a class="hamburger__menu-link" href="№">Новости</a>
+                        </li>
+                        <li class="hamburger__menu-item">
+                            <a class="hamburger__menu-link" href="№">Education</a>
+                        </li>
+                        <li class="hamburger__menu-item">
+                            <a class="hamburger__menu-link" href="№">Guidelines</a>
+                        </li>
+                        <li class="hamburger__menu-item">
+                            <a class="hamburger__menu-link" href="№">Библиотека</a>
+                        </li>
+                        <li class="hamburger__menu-item">
+                            <a class="hamburger__menu-link" href="№">FAQ</a>
+                        </li>
+                    </ul>
+                    <a class="hamburger__menu-exit" href="#">Выйти из профиля</a>
+                </nav>
+            </div>
+        </div>
 
         <!-- Main -->
         <section class="main">
@@ -79,6 +135,7 @@
                     <div class="main__shop">
                         <div class="banner">
                             <img class="banner__img" src="/src/assets/images/banner.jpg" alt="Баннер">
+                            <img class="banner__img-small" src="/src/assets/images/banner-small.jpg" alt="Баннер">
                         </div>
                         <div class="main__howto">
                             <a class="btn__howto btn__howto-green" href="#"> <img class="btn__howto-img" src="src/assets/images/plus-icon.png" alt="Плюс"> Получить баллы</a>
@@ -105,9 +162,9 @@
                     <div class="footer__left">
                         <div class="footer__copyright">© Kolesa Group</div>
                         <div class="footer__social">
-                            <a class="footer__social-link" href="#"><img class="foooter__social-img" src="src/assets/images/instagram.svg" alt="Инстаграм"></a>
-                            <a class="footer__social-link" href="#"><img class="foooter__social-img" src="src/assets/images/youtube.svg" alt="Ютюб"></a>
-                            <a class="footer__social-link" href="#"><img class="foooter__social-img" src="src/assets/images/vk.svg" alt="Вконтакте"></a>
+                            <a class="footer__social-link" href="#"><img class="footer__social-img" src="src/assets/images/instagram.svg" alt="Инстаграм"></a>
+                            <a class="footer__social-link" href="#"><img class="footer__social-img" src="src/assets/images/youtube.svg" alt="Ютюб"></a>
+                            <a class="footer__social-link" href="#"><img class="footer__social-img" src="src/assets/images/vk.svg" alt="Вконтакте"></a>
                         </div>
                     </div>
                     <div class="footer__right">
@@ -115,17 +172,27 @@
                             <a class="footer__descr">Есть идеи что улучшить?</a>
                             <a class="footer__descr">Не знаешь, с кем решить проблему?</a>
                         </div>
-                        <button class="footer__btn">Написать</button>
+                        <button class="main__btn main__btn--white ">Написать</button>
                     </div>
                 </div>
-
-
             </div>
         </footer>
 
         <!-- Modal -->
         <div class="overlay">
             <div class="modal">
+                <!-- <div class="modal__top">
+                    <button class="modal__back-btn">
+                        <img class="modal__back-img" src="src/assets/images/arrow-back-bold.svg" alt="Назад">
+                    </button>
+                    <a class="header__logo" href="#"><img class="header__logo-img" src="/src/assets/images/header_logo.svg" alt="Kolesa Logo"></a>
+                    <form class="header__right-search">
+                        <input class="header__right-input" type="text" placeholder="Поиск">
+                        <button class="header__right-btn">
+                            <img class="header__right-img" src="src/assets/images/search-mobile.svg" alt="Поиск">
+                        </button>
+                    </form>
+                </div> -->
                 <div class="modal__left">
                     <img class="modal__img" src="/src/assets/images/main-img.png" alt="Толстовка">
                     <div class="modal__thumbnails">
@@ -139,7 +206,7 @@
                     <div class="modal__item-wrapper">
                         <div class="modal__item-info">
                             <div class="modal__item-price">100 баллов</div>
-                            <a href="#" class="modal__item-btn">Попросить 50 баллов</a>
+                            <a href="#" class="main__btn main__btn--yellow">Попросить 50 баллов</a>
                         </div>
                         <div class="modal__item-balance">
                             <div class="modal__item-supheader">Твой баланс:</div>
@@ -197,6 +264,6 @@
         </div>
 
     </div>
-    <script src="/src/js/main.js"></script>
+    <script type="module" src="/src/js/main.js"></script>
   </body>
 </html>
