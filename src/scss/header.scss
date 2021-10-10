@@ -1,0 +1,154 @@
+@import '../scss/vars.scss';
+
+.header {
+    display: flex;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding: 32px 91px 0 32px;
+    }
+
+    &__left {
+        display: flex;
+        gap: 66px;
+    }
+
+    &__hamburger-btn {
+        display: none;
+        align-self: center;
+        background-color: transparent;
+        border: 0;
+        padding-bottom: 7px;
+    }
+
+    &__hamburger-img {
+        width: 14px;
+        height: 14px;
+    }
+
+    &__logo {
+        align-self: center;
+    }
+
+    &__form {
+        position: relative;
+
+        &:active .header__search {
+            transform: scale(1.25);
+        }
+    }
+
+    &__input {
+        padding: 8px 8px 8px 56px;
+        width: 308px;
+        height: 44px;
+        border: 0;
+        border-radius: 8px;
+        background: #f2f2f3;
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 0 1pt rgba(42, 129, 221, 1);
+        }
+
+        &::placeholder {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 28px;
+            color: $gray;
+        }
+    }
+
+    &__search {
+        border: 0;
+        background: transparent;
+        position: absolute;
+        width: 29px;
+        top: 11px;
+        left: 16px;
+        transition: all 0.1s ease;
+    }
+
+    &__img {
+        max-width: 100%;
+        display: block;
+    }
+
+    &__right {
+        display: flex;
+    }
+
+    &__user {
+        display: flex;
+        gap: 16px;
+    }
+
+    &__ava {
+        width: 44px;
+        height: 44px;
+    }
+
+    &__username {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 24px;
+        color: $light-blue;
+    }
+
+    &__userpoints {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 20px;
+        color: $black;
+    }
+
+    &__right-search {
+        display: none;
+        position: relative;
+        height: 38px;
+
+        & .header__right-input {
+            background-color: $white;
+            border: 0;
+            font-size: 14px;
+            padding: 15px;
+            height: 24px;
+            width: 24px;
+            transition: width 0.3s ease;
+        }
+
+        &.active .header__right-input {
+            width: 150px;
+        }
+
+        &.active .header__right-btn {
+            transform: translateX(120px);
+        }
+    }
+
+    &__right-input {
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__right-btn {
+        background-color: $white;
+        padding-top: 5px;
+        border: 0;
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 24px;
+        width: 24px;
+        transition: transform 0.3s ease;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}

@@ -1,0 +1,12 @@
+@import '../scss/vars.scss';
+
+@mixin font-properties {
+    font-family: 'Open Sans', Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: $main;
+    background-color: $bgcolor;
+}

@@ -1,0 +1,164 @@
+@import '../scss/vars.scss';
+
+@media (max-width: 996px) {
+    .main {
+        &__shop {
+            padding-right: 15px;
+        }
+
+        &__howto {
+            gap: 8px;
+        }
+    }
+
+    .btn__howto {
+        width: 100%;
+        height: 56px;
+        justify-content: end;
+        font-size: 16px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            height: 13px;
+            right: 16px;
+            top: 22px;
+            background-image: url('../assets/images/howto__arrow.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        &-img {
+            margin-right: 15px;
+            width: 28px;
+            height: 32px;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .header {
+        &__wrapper {
+            padding-right: 12px;
+        }
+
+        &__logo-img {
+            width: 153px;
+        }
+
+        &__left {
+            gap: 29px;
+        }
+
+        &__form,
+        &__right {
+            display: none;
+        }
+    }
+
+    .aside {
+        display: none;
+    }
+
+    .main {
+        padding: 0 15px;
+
+        &__shop {
+            padding-right: 0;
+        }
+
+        &__btn-goods {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    .header__hamburger-btn {
+        display: block;
+    }
+
+    .header__right-search {
+        display: block;
+    }
+}
+
+@media (max-width: 650px) {
+    .footer {
+        &__text {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .banner {
+        &__img {
+            display: none;
+        }
+
+        &__img-small {
+            display: block;
+            max-width: 312px;
+            width: 100%;
+        }
+    }
+
+    .main {
+        &__shop {
+            margin-bottom: 34px;
+        }
+
+        &__tabs {
+            overflow: auto;
+        }
+
+        &__tabs::-webkit-scrollbar {
+            width: 0;
+        }
+
+        &__goods {
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            column-gap: 24px;
+        }
+
+        &__goods-item {
+            max-width: 312px;
+        }
+
+        &__goods-img {
+            width: 100%;
+            height: 312px;
+        }
+
+        &__goods-descr {
+            padding: 8px 16px 16px 16px;
+        }
+
+        &__goods-price {
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+
+        &__goods-title {
+            font-size: 14px;
+            margin-bottom: 2px;
+        }
+
+        &__goods-size {
+            font-size: 13px;
+        }
+    }
+
+    .footer {
+        &__wrapper {
+            justify-content: space-around;
+        }
+    }
+
+    .main__btn {
+        &--white {
+            width: 140px;
+        }
+    }
+}

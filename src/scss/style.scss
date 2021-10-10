@@ -1,0 +1,47 @@
+@import '../scss/vars.scss';
+@import '../scss/mixins.scss';
+@import '../scss/header.scss';
+@import '../scss/hamburger.scss';
+@import '../scss/main.scss';
+@import '../scss/footer.scss';
+@import '../scss/points.scss';
+@import '../scss/breadcrumps.scss';
+@import '../scss/card.scss';
+@import '../scss/modal.scss';
+@import '../scss/buttons.scss';
+@import '../scss/media.scss';
+
+#app {
+    @include font-properties;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+}
+
+.container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.visual-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.d-none {
+    display: none;
+}
+
+.mt-auto {
+    margin-top: auto;
+}
+
+.show {
+    opacity: 1;
+    visibility: visible;
+}

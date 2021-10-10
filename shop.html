@@ -8,7 +8,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/src/css/reset.css">
-    <link rel="stylesheet" href="/src/css/style.css">
     <title>Vite App</title>
   </head>
   <body>
@@ -20,6 +19,9 @@
             <div class="container">
                 <div class="header__wrapper">
                     <div class="header__left">
+                        <button class="header__hamburger-btn">
+                            <img class="header__hamburger-img" src="src/assets/images/burger.svg" alt="Меню">
+                        </button>
                         <a class="header__logo" href="#"><img class="header__logo-img" src="/src/assets/images/header_logo.svg" alt="Kolesa Logo"></a>
                         <form class="header__form" action="#">
                             <input class="header__input"  type="text" placeholder="Поиск">
@@ -27,7 +29,7 @@
                         </form>
                     </div>
                     <div class="header__right">
-                        <a class="header__user" href="#">
+                        <a class="header__user" href="http://www.google.com" target="_blank">
                             <img class="header__ava" src="src/assets/images/user.png" alt="Деда Рик">
                             <div class="header__user-info">
                                 <div class="header__username">Деда Рик</div>
@@ -35,9 +37,62 @@
                             </div>
                         </a>
                     </div>
+                    <form class="header__right-search">
+                        <input class="header__right-input" type="text" placeholder="Поиск">
+                        <button type="button" class="header__right-btn">
+                            <img class="header__right-img" src="src/assets/images/search-mobile.svg" alt="Поиск">
+                        </button>
+                    </form>
                 </div>
             </div>
         </header>
+
+        <!-- Hamburger menu -->
+        <div class="hamburger__menu">
+            <div class="hamburger__menu-wrapper">
+                <div class="hamburger__menu-top">
+                    <div class="hamburger__menu-logo">
+                       <a class="hamburger__menu-logo__link" href="#"><img class="hamburger__menu-img" src="src/assets/images/header_logo.svg" alt="Логотип"></a>
+                    </div>
+                    <a class="hamburger__menu-user">
+                        <img class="hamburger__menu-ava" src="src/assets/images/user.png" alt="Аватарка">
+                        <div class="hamburger__menu-name">Абдурахман <br> Калиакпаров</div>
+                    </a>
+                </div>
+                <nav class="hamburger__menu-bottom">
+                    <ul class="hamburger__menu-list">
+                        <li class="hamburger__menu-item">
+                            <a class="hamburger__menu-link" href="№">Оргсхема</a>
+                        </li>
+                        <li class="hamburger__menu-item">
+                            <a class="hamburger__menu-link hamburger__menu-link--active" href="№">Kolesa Team</a>
+                        </li>
+                        <li class="hamburger__menu-item">
+                            <a class="hamburger__menu-link" href="№">Kolesa <span>Shop</span></a>
+                        </li>
+                        <li class="hamburger__menu-item">
+                            <a class="hamburger__menu-link" href="№">Картина компании</a>
+                        </li>
+                        <li class="hamburger__menu-item">
+                            <a class="hamburger__menu-link" href="№">Новости</a>
+                        </li>
+                        <li class="hamburger__menu-item">
+                            <a class="hamburger__menu-link" href="№">Education</a>
+                        </li>
+                        <li class="hamburger__menu-item">
+                            <a class="hamburger__menu-link" href="№">Guidelines</a>
+                        </li>
+                        <li class="hamburger__menu-item">
+                            <a class="hamburger__menu-link" href="№">Библиотека</a>
+                        </li>
+                        <li class="hamburger__menu-item">
+                            <a class="hamburger__menu-link" href="№">FAQ</a>
+                        </li>
+                    </ul>
+                    <a class="hamburger__menu-exit" href="#">Выйти из профиля</a>
+                </nav>
+            </div>
+        </div>
 
         <!-- Main -->
         <section class="main">
@@ -181,6 +236,6 @@
         </div>
         </div>
     </div>
-    <script src="/src/js/main.js"></script>
+    <script type="module" src="/src/js/main.js"></script>
   </body>
 </html>

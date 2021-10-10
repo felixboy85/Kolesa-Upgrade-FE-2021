@@ -1,0 +1,106 @@
+@import '../scss/vars.scss';
+
+.hamburger {
+    &__menu {
+        background: rgba(28, 24, 25, 0);
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        transform: translateX(-100%);
+        transition: opacity 0.3s;
+    }
+
+    &__menu.hamburger__menu--active {
+        background: rgba(28, 24, 25, 0.6);
+        transform: translateX(0);
+    }
+
+    &__menu-wrapper {
+        display: flex;
+        padding: 24px 8px 61px 24px;
+        flex-direction: column;
+        background-color: #fff;
+        width: 80%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        transform: translateX(-100%);
+        transition: transform 0.5s;
+    }
+
+    &__menu-wrapper.hamburger__menu-wrapper--active {
+        transform: translateX(0);
+    }
+
+    &__menu-top {
+        margin-bottom: 36px;
+    }
+
+    &__menu-img {
+        max-width: 148px;
+        width: 100%;
+    }
+
+    &__menu-user {
+        display: flex;
+        position: relative;
+        max-width: 258px;
+        width: 100%;
+        cursor: pointer;
+
+        &::after {
+            content: '';
+            position: absolute;
+            background-image: url('../assets/images/howto__arrow.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 9px;
+            height: 18px;
+            right: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    &__menu-ava {
+        margin-right: 16px;
+        width: 52px;
+        height: 52px;
+    }
+
+    &__menu-name {
+        max-width: 108px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        color: var(--text-color);
+    }
+
+    &__menu-item {
+        margin-bottom: 26px;
+        font-size: 16px;
+        line-height: 24px;
+        color: var(--text-color);
+
+        span {
+            font-weight: 600;
+        }
+
+        &:last-child {
+            margin-bottom: 24px;
+        }
+    }
+
+    &__menu-link.hamburger__menu-link--active {
+        font-weight: 600;
+    }
+
+    &__menu-exit {
+        font-size: 16px;
+        line-height: 24px;
+        color: #f33;
+    }
+}
