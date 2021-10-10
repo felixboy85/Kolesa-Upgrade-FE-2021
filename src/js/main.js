@@ -3,103 +3,75 @@ import '../scss/style.scss';
 // Рендер карточки
 window.addEventListener('DOMContentLoaded', () => {
     const parent = document.querySelector('.main__goods');
-    const myCards = [
+    const tabs = document.querySelectorAll('.js__main-tab');
+    const clothes = [
         {
-            image: 'src/assets/images/shirt.png',
-            alt:   'Футболка',
-            span:  true,
-            price: '220 Баллов',
-            title: "Футболка 'Эволюционируй или сдохни'",
-            size:  'Размеры S/M/L',
+            id:      0,
+            image:   'src/assets/images/shirt.png',
+            alt:     'Футболка',
+            span:    true,
+            price:   '220 Баллов',
+            title:   "Футболка 'Эволюционируй или сдохни'",
+            size:    'Размеры S/M/L',
+            details: 'Брендированная футболка от Qazaq Republic. Материал: Хлопок 80%, Вискоза 20%',
         },
+
         {
-            image: 'src/assets/images/shirt.png',
-            alt:   'Футболка',
-            span:  true,
-            price: '220 Баллов',
-            title: "Футболка 'Эволюционируй или сдохни'",
-            size:  'Размеры S/M/L',
+            id:      1,
+            image:   'src/assets/images/main-img.png',
+            alt:     'Толстовка',
+            span:    true,
+            price:   '250 Баллов',
+            title:   "Толстовка 'Эволюционируй или сдохни'",
+            size:    'Размеры S/M/L',
+            details: 'Брендированная толстовка от Qazaq Republic. Материал: Хлопок 80%, Вискоза 20%',
         },
+
         {
-            image: 'src/assets/images/shirt.png',
-            alt:   'Футболка',
-            span:  false,
-            price: '220 Баллов',
-            title: "Футболка 'Эволюционируй или сдохни'",
-            size:  'Размеры S/M/L',
+            id:      2,
+            image:   'src/assets/images/socks.png',
+            alt:     'Носки',
+            span:    false,
+            price:   '190 Баллов',
+            title:   "Носки 'Эволюционируй или сдохни'",
+            size:    'Размеры S/M/L',
+            details: 'Брендированные носки от Qazaq Republic. Материал: Хлопок 80%, Вискоза 20%',
         },
+    ];
+
+    const accesories = [
         {
-            image: 'src/assets/images/shirt.png',
-            alt:   'Футболка',
-            span:  false,
-            price: '220 Баллов',
-            title: "Футболка 'Эволюционируй или сдохни'",
-            size:  'Размеры S/M/L',
+            id:      3,
+            image:   'src/assets/images/bottle.png',
+            alt:     'Бутылка',
+            span:    false,
+            price:   '190 Баллов',
+            title:   "Бутылка 'Kolesa Group'",
+            size:    'Объем 0,7 литра',
+            details: 'Брендированная бутылка от Qazaq Republic. Объем 0,7 литра',
         },
-    // {
-    //     image: 'src/assets/images/shirt.png',
-    //     alt:   'Футболка',
-    //     span:  false,
-    //     price: '220 Баллов',
-    //     title: "Футболка 'Эволюционируй или сдохни'",
-    //     size:  'Размеры S/M/L',
-    // },
-    // {
-    //     image: 'src/assets/images/shirt.png',
-    //     alt:   'Футболка',
-    //     span:  false,
-    //     price: '220 Баллов',
-    //     title: "Футболка 'Эволюционируй или сдохни'",
-    //     size:  'Размеры S/M/L',
-    // },
-    // {
-    //     image: 'src/assets/images/shirt.png',
-    //     alt:   'Футболка',
-    //     span:  false,
-    //     price: '220 Баллов',
-    //     title: "Футболка 'Эволюционируй или сдохни'",
-    //     size:  'Размеры S/M/L',
-    // },
-    // {
-    //     image: 'src/assets/images/shirt.png',
-    //     alt:   'Футболка',
-    //     span:  false,
-    //     price: '220 Баллов',
-    //     title: "Футболка 'Эволюционируй или сдохни'",
-    //     size:  'Размеры S/M/L',
-    // },
-    // {
-    //     image: 'src/assets/images/shirt.png',
-    //     alt:   'Футболка',
-    //     span:  false,
-    //     price: '220 Баллов',
-    //     title: "Футболка 'Эволюционируй или сдохни'",
-    //     size:  'Размеры S/M/L',
-    // },
-    // {
-    //     image: 'src/assets/images/shirt.png',
-    //     alt:   'Футболка',
-    //     span:  false,
-    //     price: '220 Баллов',
-    //     title: "Футболка 'Эволюционируй или сдохни'",
-    //     size:  'Размеры S/M/L',
-    // },
-    // {
-    //     image: 'src/assets/images/shirt.png',
-    //     alt:   'Футболка',
-    //     span:  false,
-    //     price: '220 Баллов',
-    //     title: "Футболка 'Эволюционируй или сдохни'",
-    //     size:  'Размеры S/M/L',
-    // },
-    // {
-    //     image: 'src/assets/images/shirt.png',
-    //     alt:   'Футболка',
-    //     span:  false,
-    //     price: '220 Баллов',
-    //     title: "Футболка 'Эволюционируй или сдохни'",
-    //     size:  'Размеры S/M/L',
-    // },
+
+        {
+            id:      4,
+            image:   'src/assets/images/bottle.png',
+            alt:     'Бутылка',
+            span:    true,
+            price:   '150 Баллов',
+            title:   "Бутылка 'Kolesa Group'",
+            size:    'Объем 0,5 литра',
+            details: 'Брендированная бутылка от Qazaq Republic. Объем 0,5 литра',
+        },
+
+        {
+            id:      5,
+            image:   'src/assets/images/bottle.png',
+            alt:     'Бутылка',
+            span:    false,
+            price:   '130 Баллов',
+            title:   "Бутылка 'Kolesa Group'",
+            size:    'Объем 0,3 литра',
+            details: 'Брендированная бутылка от Qazaq Republic. Объем 0,3 литра',
+        },
     ];
 
     function renderCard({
@@ -124,7 +96,39 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    myCards.forEach(renderCard);
+    function filterCard() {
+        tabs.forEach((tab) => {
+            tab.addEventListener('click', () => {
+                if (tab.dataset.key === 'clothes') {
+                    parent.innerHTML = '';
+                    clothes.forEach(renderCard);
+                } else if (tab.dataset.key === 'accesories') {
+                    parent.innerHTML = '';
+                    accesories.forEach(renderCard);
+                } else if (tab.dataset.key === 'all') {
+                    parent.innerHTML = '';
+                    const all = clothes.concat(accesories);
+
+                    all
+                        .sort((a, b) => Number(b.span) - Number(a.span))
+                        .forEach(renderCard);
+                }
+            });
+
+            tabs.forEach((btn) => {
+                btn.addEventListener('click', () => {
+                    tabs.forEach((button) => {
+                        button.classList.remove('main__tab--active');
+                    });
+                    tab.classList.add('main__tab--active');
+                });
+            });
+        });
+    }
+    clothes.concat(accesories)
+        .sort((a, b) => Number(b.span) - Number(a.span))
+        .forEach(renderCard);
+    filterCard();
 
     // Модальное окно
     const buttons = document.querySelectorAll('.main__btn-goods');

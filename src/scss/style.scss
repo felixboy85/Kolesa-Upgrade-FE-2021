@@ -16,10 +16,13 @@
 }
 
 .page {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     min-height: 100vh;
-    justify-content: space-between;
+    grid-template: minmax(104px, auto) 1fr minmax(100px, auto)/1fr;
+    grid-template-areas:
+        'header'
+        'main'
+        'footer';
 }
 
 .container {

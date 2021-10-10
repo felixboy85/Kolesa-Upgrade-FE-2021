@@ -8,7 +8,6 @@
     &__shop {
         max-width: 1038px;
         width: 100%;
-        margin-top: 24px;
         margin-bottom: 192px;
     }
 
@@ -58,9 +57,13 @@
     }
 
     &__goods {
-        display: grid;
+        display: none;
         grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
         column-gap: 24px;
+    }
+
+    &__goods.main__goods--active {
+        display: grid;
     }
 
     &__goods-item {
@@ -142,7 +145,6 @@
 .aside {
     display: inline-block;
     min-width: 281px;
-    margin-top: 30px;
     margin-left: 32px;
 }
 
