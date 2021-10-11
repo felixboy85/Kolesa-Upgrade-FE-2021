@@ -37,11 +37,42 @@ window.addEventListener('DOMContentLoaded', () => {
             size:    'Размеры S/M/L',
             details: 'Брендированные носки от Qazaq Republic. Материал: Хлопок 80%, Вискоза 20%',
         },
+        {
+            id:      3,
+            image:   'src/assets/images/socks.png',
+            alt:     'Носки',
+            span:    false,
+            price:   '120 Баллов',
+            title:   "Носки 'Эволюционируй или сдохни'",
+            size:    'Размеры S/M/L',
+            details: 'Брендированные носки от Qazaq Republic. Материал: Хлопок 80%, Вискоза 20%',
+        },
+        {
+            id:      4,
+            image:   'src/assets/images/socks.png',
+            alt:     'Носки',
+            span:    false,
+            price:   '145 Баллов',
+            title:   "Носки 'Эволюционируй или сдохни'",
+            size:    'Размеры S/M/L',
+            details: 'Брендированные носки от Qazaq Republic. Материал: Хлопок 80%, Вискоза 20%',
+        },
+
+        {
+            id:      5,
+            image:   'src/assets/images/socks.png',
+            alt:     'Носки',
+            span:    false,
+            price:   '135 Баллов',
+            title:   "Носки 'Эволюционируй или сдохни'",
+            size:    'Размеры S/M/L',
+            details: 'Брендированные носки от Qazaq Republic. Материал: Хлопок 80%, Вискоза 20%',
+        },
     ];
 
     const accesories = [
         {
-            id:      3,
+            id:      6,
             image:   'src/assets/images/bottle.png',
             alt:     'Бутылка',
             span:    false,
@@ -52,25 +83,55 @@ window.addEventListener('DOMContentLoaded', () => {
         },
 
         {
-            id:      4,
-            image:   'src/assets/images/bottle.png',
+            id:      7,
+            image:   'src/assets/images/acc1.jpg',
             alt:     'Бутылка',
             span:    true,
             price:   '150 Баллов',
-            title:   "Бутылка 'Kolesa Group'",
-            size:    'Объем 0,5 литра',
-            details: 'Брендированная бутылка от Qazaq Republic. Объем 0,5 литра',
+            title:   'Портмоне',
+            size:    '',
+            details: 'Брендированное Портмоне от Qazaq Republic.',
         },
 
         {
-            id:      5,
-            image:   'src/assets/images/bottle.png',
+            id:      8,
+            image:   'src/assets/images/acc2.jpg',
+            alt:     'Бутылка',
+            span:    true,
+            price:   '130 Баллов',
+            title:   'Чехол для Iphone',
+            size:    '',
+            details: 'Брендированный чехол для iPhone.',
+        },
+        {
+            id:      9,
+            image:   'src/assets/images/acc2.jpg',
             alt:     'Бутылка',
             span:    false,
-            price:   '130 Баллов',
-            title:   "Бутылка 'Kolesa Group'",
-            size:    'Объем 0,3 литра',
-            details: 'Брендированная бутылка от Qazaq Republic. Объем 0,3 литра',
+            price:   '120 Баллов',
+            title:   'Чехол для Iphone',
+            size:    '',
+            details: 'Брендированный чехол для iPhone.',
+        },
+        {
+            id:      10,
+            image:   'src/assets/images/acc2.jpg',
+            alt:     'Бутылка',
+            span:    false,
+            price:   '125 Баллов',
+            title:   'Чехол для Iphone',
+            size:    '',
+            details: 'Брендированный чехол для iPhone.',
+        },
+        {
+            id:      11,
+            image:   'src/assets/images/acc2.jpg',
+            alt:     'Бутылка',
+            span:    false,
+            price:   '110 Баллов',
+            title:   'Чехол для Iphone',
+            size:    '',
+            details: 'Брендированный чехол для iPhone.',
         },
     ];
 
@@ -87,7 +148,7 @@ window.addEventListener('DOMContentLoaded', () => {
             <div class="main__goods-price">${price}</div>
             <h3 class="main__goods-title">${title}</h3>
             <p class="main__goods-size">${size}</p>
-            <button class="main__btn main__btn-goods visual-hidden">Заказать</button>
+            <button onclick="handleClick()" class="main__btn main__btn-goods visual-hidden">Заказать</button>
         </div>
     </div>`;
 
@@ -114,13 +175,12 @@ window.addEventListener('DOMContentLoaded', () => {
                         .forEach(renderCard);
                 }
             });
-
-            tabs.forEach((btn) => {
-                btn.addEventListener('click', () => {
-                    tabs.forEach((button) => {
-                        button.classList.remove('main__tab--active');
+            tabs.forEach((item) => {
+                item.addEventListener('click', () => {
+                    tabs.forEach((btn) => {
+                        btn.classList.remove('main__tab--active');
                     });
-                    tab.classList.add('main__tab--active');
+                    item.classList.add('main__tab--active');
                 });
             });
         });
@@ -135,15 +195,22 @@ window.addEventListener('DOMContentLoaded', () => {
     const close = document.querySelector('.close__btn');
     const overlay = document.querySelector('.overlay');
 
-    buttons.forEach((button) => {
-        button.addEventListener('click', () => {
-            overlay.classList.add('show');
-        });
+    // eslint-disable-next-line no-alert
+    window.handleClick = () => buttons.forEach(() => {
+        overlay.classList.add('show');
     });
 
-    close.addEventListener('click', () => {
+    // window.handleClick = () => {
+    //     // debugger
+    //     // eslint-disable-next-line no-alert
+    //     alert('click');
+    // };
+
+    const closeModal = () => close.addEventListener('click', () => {
         overlay.classList.remove('show');
     });
+
+    closeModal();
 
     // Hamburger menu
     const hamburger = document.querySelector('.header__hamburger-btn');
