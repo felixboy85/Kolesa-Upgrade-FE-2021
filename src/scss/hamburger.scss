@@ -9,16 +9,16 @@
         z-index: 2;
         transform: translateX(-100%);
         transition: opacity 0.3s;
-    }
 
-    &__menu.hamburger__menu--active {
-        background: rgba(28, 24, 25, 0.6);
-        transform: translateX(0);
+        &.hamburger__menu--active {
+            background: rgba(28, 24, 25, 0.6);
+            transform: translateX(0);
+        }
     }
 
     &__menu-wrapper {
         display: flex;
-        padding: 24px 8px 61px 24px;
+        padding: 24px 8px 60px 24px;
         flex-direction: column;
         background-color: #fff;
         width: 80%;

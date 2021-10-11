@@ -1,10 +1,8 @@
 @import '../scss/vars.scss';
 
-.breadcrupms {
-    margin-bottom: 24px;
-}
-
 .breadcrumps {
+    margin-bottom: 24px;
+
     &__list-item {
         display: inline-block;
         position: relative;

@@ -96,6 +96,7 @@
         </div>
 
         <!-- Main -->
+
         <section class="main">
             <div class="container">
                 <div class="main__wrapper">
@@ -143,11 +144,17 @@
                             <a class="btn__howto btn__howto-blue" href="#"><img class="btn__howto-img" src="src/assets/images/gift-icon.png" alt="Подарок">Подарить баллы</a>
                         </div>
                         <div class="main__tabs">
-                            <button class="main__tab main__tab--active" href="#">Все товары</button>
-                            <button class="main__tab" href="#">Одежда</button>
-                            <button class="main__tab" href="#">Аксессуары</button>
+                            <button data-key="all" class="js__main-tab main__tab main__tab--active" href="#">Все товары</button>
+                            <button data-key="clothes" class="js__main-tab main__tab" href="#">Одежда</button>
+                            <button data-key="accesories" class="js__main-tab main__tab" href="#">Аксессуары</button>
                         </div>
-                        <div class="main__goods">
+                        <div class="main__goods main__goods--active">
+
+                        </div>
+                        <div class="main__clothes d-none">
+
+                        </div>
+                        <div class="main__acc d-none">
 
                         </div>
                     </div>
@@ -193,7 +200,7 @@
                         </button>
                     </form>
                 </div> -->
-                <div class="modal__left">
+                 <div class="modal__left">
                     <img class="modal__img" src="/src/assets/images/main-img.png" alt="Толстовка">
                     <div class="modal__thumbnails">
                         <img class="modal__thumbnail" src="/src/assets/images/image1.png" alt="Мини-картинка-1">
@@ -239,7 +246,7 @@
                     </form>
                     <div class="details">
                         <h3 class="details__title">Детали:</h3>
-                        <p class="detail_descr">Брендированная толстовка от Qazaq Republic. Материал: Хлопок 80%, Вискоза 20%</p>
+                        <p class="detail__descr">Брендированная толстовка от Qazaq Republic. Материал: Хлопок 80%, Вискоза 20%</p>
                     </div>
                     <div class="question">
                         <h3 class="question__title">Как выбрать размер:</h3>
