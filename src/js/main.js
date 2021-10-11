@@ -200,12 +200,6 @@ window.addEventListener('DOMContentLoaded', () => {
         overlay.classList.add('show');
     });
 
-    // window.handleClick = () => {
-    //     // debugger
-    //     // eslint-disable-next-line no-alert
-    //     alert('click');
-    // };
-
     const closeModal = () => close.addEventListener('click', () => {
         overlay.classList.remove('show');
     });
