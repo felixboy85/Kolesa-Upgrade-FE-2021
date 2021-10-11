@@ -87,7 +87,7 @@ window.addEventListener('DOMContentLoaded', () => {
             <div class="main__goods-price">${price}</div>
             <h3 class="main__goods-title">${title}</h3>
             <p class="main__goods-size">${size}</p>
-            <button class="main__btn main__btn-goods visual-hidden">Заказать</button>
+            <button class="main__btn main__btn-goods visual-hidden" onclick="handleClick()">Заказать</button>
         </div>
     </div>`;
 
@@ -140,6 +140,12 @@ window.addEventListener('DOMContentLoaded', () => {
             overlay.classList.add('show');
         });
     });
+
+    window.handleClick = () => {
+        // debugger
+        // eslint-disable-next-line no-alert
+        alert('click');
+    };
 
     close.addEventListener('click', () => {
         overlay.classList.remove('show');
